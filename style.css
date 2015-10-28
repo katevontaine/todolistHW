@@ -1,0 +1,84 @@
+body {
+  background-position: center;
+  background-repeat: no-repeat; }
+
+div {
+  width: 80%;
+  height: 420px;
+  margin: 0 auto;
+  padding: 0px 0 0 0;
+  font-size: 18px;
+  font-family: sans-serif; }
+
+.todocontainer {
+  opacity: .7;
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+  padding: 30px 0 0 0; }
+
+header {
+  background-color: grey;
+  width: 60%;
+  height: 80px;
+  display: block;
+  margin: 0 auto;
+  padding: 0px 0 0 0; }
+  header h1 {
+    font-size: 35px;
+    font-family: sans-serif;
+    margin: 0 auto;
+    text-align-last: center;
+    padding: 15px 0 0 125px; }
+
+footer {
+  width: 60%;
+  background-color: grey;
+  display: block;
+  margin: 0 auto;
+  padding: 0px 0 0 0; }
+  footer h4 {
+    font-size: 18px;
+    font-family: sans-serif;
+    padding: 0 0 0 280px; }
+  footer ul li {
+    display: inline-block;
+    font-size: 14px;
+    font-family: sans-serif;
+    margin: 0 auto;
+    padding: 10px 0 0 60px; }
+    footer ul li a {
+      margin: 0 auto; }
+
+p {
+  font-weight: bold;
+  margin: 0 auto;
+  text-align: center; }
+
+input {
+  font-size: 18px;
+  font-family: sans-serif;
+  font-style: italic; }
+
+form {
+  margin: 0 auto;
+  padding-left: 305px;
+  padding-top: 15px; }
+
+.complete {
+  font-style: italic;
+  text-decoration: line-through; }
+
+.active {
+  display: inline-block; }
+
+.remove {
+  display: none; }
+
+footer div {
+  display: inline-block; }
+
+.theCounter {
+  height: 15px;
+  width: 100px;
+  display: inline-block; }
