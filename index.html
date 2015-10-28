@@ -5,8 +5,8 @@
     <title>TO DO LIST HOMEWORK</title>
     <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
     <script type="text/html" id="todoTmpl">
-    <article><p><%= content %></p></article>
-      <button class="Done">Done</button>
+    <article rel=""><p class="ddd"><%= content %></p></article>
+      <button type="text" class="imDone">Done</button>
 
     </script>
   </head>
@@ -21,20 +21,20 @@
         <article class="empty1"></article>
         <article class='todocontainer'>  </article>
           <form>
-            <input type="text" name="todoname" placeholder="What do you need to do?" style="width:380px;" value=""> <input type="submit" name="SAVE" value="SAVE">
+            <input type="text" name="todoname" placeholder="What do you need to do?" style="width:380px;" value=""> <input type="button" rel="save" value="SAVE">
           </form>
 
       </div>
 
       <footer>
-            <a href rel="counter"> Counter </a> <div class='theCounter'></div>
+            <a href rel="counter"> How many tasks? </a> <div class='theCounter'></div>
 
-            <nav>
+            <nav class="bottom">
             <ul>
-            <li><a href  rel="all">ALL</a></li>
-            <li><a href  rel="active">ACTIVE</a></li>
-            <li><a href  rel="complete">COMPLETE</a></li>
-            <li><input type="button" name="clearall" value="CLEAR ALL"></li>
+            <li><a href class="" rel="all">ALL</a></li>
+            <li><a href class="" rel="active">ACTIVE</a></li>
+            <li><a href class="" rel="complete">COMPLETE</a></li>
+            <li><input type="button" rel="clearall" name="clearall" value="CLEAR ALL" class="clearall"></li>
           </ul>
         </nav>
           <h4>Double Click to edit</h4>

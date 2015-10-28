@@ -17,6 +17,10 @@ var page = {
 
   events: function() {
 
+    // var dblClick = document.getElementByClass('ddd').addEventListener('dblclick', function(){
+    //   $('input').appendto('.ddd');
+    //   });
+
     $('form').on('submit', function (event) {
          event.preventDefault();
          var newList = {
@@ -28,29 +32,94 @@ var page = {
          var todoId = todoList.indexOf(newList);
          page.loadTemplate($('.todocontainer'), newList, $('#todoTmpl').html());
          $('.todocontainer todoname').val('');
+        $('.todocontainer textarea').val('');
        });
 
 
 
-       $('footer ul li > a').on('click', function(event){
+       $('footer > a').on('click', function(event){
          event.preventDefault();
          var todoId = todoList.length
           console.log(todoId);
-
-          // $(todoId).html('theCounter');
+          // $('theCounter').text(todoId);
+          $("div.theCounter").text(todoId).css( "color", "white" );
         });
                 // });
           $('footer ul li a').on('click', function(event){
             event.preventDefault();
             var clickedSection = "." + $(this).attr('rel');
            $('.todocontainer').addClass('clickedSection');
+
        });
 
-       $('button .done').on('click', function(event){
+      //  $('.save').on('click', function(event){
+      //    event.preventDefault();
+      //    var clickedSection = "." + $(this).attr('rel');
+      //    $('article').addClass('.active');
+      //  });
+
+       $('.imDone').on('click', function(event){
          event.preventDefault();
-         var clickedSection = "." + $(this).attr('rel');
-         $(clickedSection).addClass('.remove');
+        //  var clickedSection = "." + $(this).attr('rel');
+        //  $('.save').addClass('.complete');
+         $('.save').siblings('p').addClass('hideElement');
        });
+
+      //  $('footer nav li a').on('click', function(event){
+      //    event.preventDefault();
+      //    var clickedSection = "." + $(this).attr('rel');
+      //    $('.todocontainer').addClass('clickedSection');
+      //    $('.todocontainer').siblings('article').addClass('hideElement');
+      //    console.log(clickedSection);
+      //     });
+
+          $('.all').on('click', function(event){
+            event.preventDefault();
+            var clickedSection = "." + $(this).attr();
+            $('clickedSection').toggleClass('.all');
+            $('clickedSection').siblings("article").addClass('hideElement');
+          });
+
+          $('.active').on('click', function(event){
+            event.preventDefault();
+            var clickedSection = "." + $(this).attr();
+            $('clickedSection').toggleClass('.active');
+            $('clickedSection').siblings("article").addClass('hideElement');
+          });
+
+          $('.complete').on('click', function(event){
+            event.preventDefault();
+            var clickedSection = "." + $(this).attr();
+            $('clickedSection').toggleClass('.complete');
+            $('clickedSection').siblings("article").addClass('hideElement');
+          });
+
+          $(".clearall").on('click', function(event){
+            event.preventDefault();
+           $('.todocontainer').empty();
+                 });
+
+           $(".ddd").dblclick(function(){
+               alert("The paragraph was double-clicked");
+           });
+
+          //  $(".ddd").on('dblclick', function(event){
+          //    event.preventDefault();
+          //   $('.ddd').appendto();
+          //         });
+
+          // (".ddd").on(function OnDblClickSpan () {
+          //         alert ("You have double-clicked on the text!");
+          //     });
+
+            // ('.ddd').onbdlclick (function(){
+            //   event.preventDefault();
+            //   $('.ddd').appendto();
+            // });
+
+          // }); //end of button
+
+      //  })
     },
     //  end event bracket
     loadTemplate: function ($el, data, tmpl) {

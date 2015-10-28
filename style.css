@@ -37,6 +37,11 @@ footer {
   display: block;
   margin: 0 auto;
   padding: 0px 0 0 0; }
+  footer a {
+    padding: 0 0 0 30px;
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif; }
   footer h4 {
     font-size: 18px;
     font-family: sans-serif;
@@ -48,7 +53,11 @@ footer {
     margin: 0 auto;
     padding: 10px 0 0 60px; }
     footer ul li a {
-      margin: 0 auto; }
+      margin: 0 auto;
+      padding: 0 0 0 30px;
+      text-decoration: none;
+      color: white;
+      font-family: sans-serif; }
 
 p {
   font-weight: bold;
@@ -72,7 +81,10 @@ form {
 .active {
   display: inline-block; }
 
-.remove {
+.ddd .remove {
+  display: none; }
+
+.hideElement {
   display: none; }
 
 footer div {
@@ -81,4 +93,5 @@ footer div {
 .theCounter {
   height: 15px;
   width: 100px;
-  display: inline-block; }
+  display: inline-block;
+  color: white; }
